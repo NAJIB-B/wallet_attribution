@@ -1,0 +1,21 @@
+{
+  "name": "wallet-attribution",
+  "version": "1.0.0",
+  "main": "wallet_attribution.js",
+  "scripts": {
+	"start": "tsx wallet_attribution.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "type": "module",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@solana/web3.js": "^1.98.2",
+    "tsx": "^4.19.4"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
