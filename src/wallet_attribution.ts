@@ -1,7 +1,8 @@
 import { Connection, PublicKey, LAMPORTS_PER_SOL } from "@solana/web3.js";
+import { popularProgramIds } from "./programIds";
 
 const publicKeyToAnalyze = new PublicKey(
-  "8m3vXTD3bVESQoVP896tsTXRsvYb7j7R14PaqXxB4A3z"
+  "FoptjS9L1JNggnbRFj4zsxunEQ7xubtmhkV9uEEbmvtZ"
 );
 //7GommU943mhr8t1vVx3L39PMAeLuUrmjMDd9gU47cS3Z
 //DroyFg1jFGc6wXg4yKfmNrUrwx5yLz29LwtoX5GdAbL9
@@ -10,33 +11,8 @@ const publicKeyToAnalyze = new PublicKey(
 const connection = new Connection(
   "https://restless-wild-emerald.solana-mainnet.quiknode.pro/9da4d4c2753c970c48309b674ef9ae18a74aab83/"
 );
-//   https://solitary-wider-hill.solana-devnet.quiknode.pro/784cbce13f7ce74313244cdabe737bf5288c70f0/
-//   https://restless-wild-emerald.solana-mainnet.quiknode.pro/9da4d4c2753c970c48309b674ef9ae18a74aab83/
 
 const BATCH_SIZE = 50;
-
-//List of popular program IDs
-const popularProgramIds = {
-  "Jito Stake pool": new PublicKey(
-    "Jito4APyf642JPZPx3hGc6WWJ8zPKtRbRs4P815Awbb"
-  ),
-  "Jito Governance Token": new PublicKey(
-    "jtojtomepa8beP8AuQc6eXt5FriJwfFMwQx2v2f9mCL"
-  ),
-  "Metaplex Token Metadata": new PublicKey(
-    "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s"
-  ),
-  "Candy Machine v3": new PublicKey(
-    "CndyV3LdqHUfDLmE5naZjVN8rBZz4tqhdefbAnjHG3JR"
-  ),
-  "Raydium Standard AMM ": new PublicKey(
-    "CPMMoo8L3F4NbTegBCKVNunggL7H1ZpdTHKxQB5qKP1C"
-  ),
-  "Raydium Stable Swap AMM": new PublicKey(
-    "5quBtoiQqxF9Jv6KYKctB59NT3gtJD2Y65kdnB1Uev3h"
-  ),
-  "Solana Program Id": new PublicKey("11111111111111111111111111111111"),
-};
 
 const findInteractedContracts = async (
   publicKey: PublicKey
